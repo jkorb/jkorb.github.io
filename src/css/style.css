@@ -1,0 +1,122 @@
+:root {
+  /* Base colors */
+  --color0: black;   /* black   */
+  --color1: red;     /* red     */
+  --color2: green;   /* green   */
+  --color3: yellow;  /* yellow  */
+  --color4: blue;    /* blue    */
+  --color5: magenta; /* magenta */
+  --color6: cyan;    /* cyan    */
+  --color7: white;   /* white   */
+  /* Additional */
+  --color8: grey     /* grey */;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+body {
+    color: var(--color0);
+    background-color: var(--color7);
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header menu */
+
+#menu {
+    top: 0;
+    position: sticky;
+    padding: 0.5em;
+    color: var(--color7);
+    background-color: var(--color0);
+    overflow: hidden;
+}
+
+#menu a {
+    color: var(--color7);
+}
+
+/* Main content */
+
+#content {
+    clear: both;
+    margin: 0;
+    padding: 0;
+    color: var(--color0);
+    background-color: var(--color7);
+    overflow: hidden;
+}
+
+#content a {
+  color: var(--color4);
+}
+
+/* Navigation block */
+
+#nav {
+  float: left;
+  margin: 2em 1px 0 0;
+  padding: 1em 0;
+  width: 9em;
+  border-right: 1px dashed black;
+}
+
+#nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+#nav li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#nav li ul {
+  padding-left: 1em;
+}
+
+#nav li a {
+  display: block;
+  margin: 0;
+  padding: 0.8ex 2em 0.8ex 1em;
+}
+
+/* Main */
+
+#main {
+  margin: 0 0 0 10em;
+  max-width: 60em;
+  padding: 1.5em;
+}
+
+/* Formatting */
+
+.separator {
+  padding: 0 1em;
+}
+
+.right {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+#footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}

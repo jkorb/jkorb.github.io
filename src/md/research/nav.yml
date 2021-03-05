@@ -1,0 +1,10 @@
+---
+nav: |
+    ```{=html}
+    <ul>
+    <li><a href="/research/index.html">research/ </a></li>
+    <li><a href="#papers">papers/ </a></li>
+    <li><a href="#papers">talks/ </a></li>
+    </ul>
+    ```
+---

@@ -1,0 +1,9 @@
+---
+nav: |
+    ```{=html}
+    <ul>
+    <li><a href="https://jkorbmacher.org">about/ </a></li>
+    <li><a href="https://jkorbmacher.org/contact.html">contact/ </a></li>
+    </ul>
+    ```
+...
