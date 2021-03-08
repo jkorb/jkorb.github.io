@@ -4,7 +4,7 @@ title: jkorbmacher.org - research/papers
 
 ## Published
 
-- *Forthcoming*. "Multiple Models, One Explanation." (w/ [Chiara Lisciandra](https://chiaralisciandra.com/)). *Journal of Economic Methodology*. [Preprint](https://github.com/jkorb/LISMMO/releases/download/v0.1/LISMMO.pdf) 
+- 2021 - "Multiple Models, One Explanation." (w/ [Chiara Lisciandra](https://chiaralisciandra.com/)). *Journal of Economic Methodology*. [Online](https://doi.org/10.1080/1350178X.2021.1892800) [Preprint](https://github.com/jkorb/LISMMO/releases/download/v0.1/LISMMO.pdf) 
 - 2020 – "Truthmakers and Normative Conflicts" (w/ Albert Anglberger). *Studia Logica* 108: 49–83. [Print](https://doi.org/10.1007/s11225-019-09862-5)
 - 2018 – "The Lambda Calculus" (w/ Jesse Alama). *Stanford Encyclopedia of Philosophy (Spring 2019)*. [Online](https://plato.stanford.edu/entries/lambda-calculus/) 
 - 2018 – "What are Structural Properties?" (w/ [Georg Schiemer](https://sites.google.com/site/georgschiemeracademic/home)). *Philosophia Mathematica* 26(3): 295–323. [Print](https://doi.org/10.1093/philmat/nkx011)
