@@ -1,15 +1,20 @@
 SRC_DIR = src
-
 DST_DIR = docs
+
 MD_DIR = $(SRC_DIR)/md
 MD_FILES = $(shell fd -t f ".md" $(SRC_DIR))
 HTML_TREE = $(patsubst $(MD_DIR)/%, $(DST_DIR)/%, $(shell fd -t d . $(MD_DIR)))
 HTML_FILES = $(patsubst $(MD_DIR)/%.md, $(DST_DIR)/%.html, $(MD_FILES))
+
 TEMPLATE = $(SRC_DIR)/templates/main.html
+
 CSS_SRC_DIR = $(SRC_DIR)/css
 CSS_DST_DIR = $(DST_DIR)/css
 CSS_SRC_FILES = $(shell fd -t f ".css" $(CSS_SRC_DIR))
 CSS_DST_FILES = $(patsubst $(CSS_SRC_DIR)/%.css, $(CSS_DST_DIR)/%.css, $(CSS_SRC_FILES))
+
+CNAME_SRC = $(SRC_DIR)/CNAME
+CNAME_DST = $(DST_DIR)/CNAME
 
 .PHONY : all
 all : html css cname
@@ -35,8 +40,10 @@ $(DST_DIR)/%.html : $(MD_DIR)/%.md $(TEMPLATE) | $(HTML_TREE)
 
 .PHONY : cname
 
-cname :
-	cp src/CNAME docs/CNAME
+cname : $(CNAME_DST)
+
+$(CNAME_DST): $(CNMA_SRC)
+	cp $< $@
 
 .PHONY : clean
 
