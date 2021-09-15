@@ -1,0 +1,8 @@
+# config.yaml
+baseURL: https://jkorbmacher.org
+title: jkorbmacher.org
+# menu : ["main", "list"]
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

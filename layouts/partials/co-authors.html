@@ -1,0 +1,20 @@
+{{- $auth_no := (len . ) -}}
+{{- if (eq $auth_no 1) }}
+{{- else -}}
+&nbsp;(w/&nbsp;{{- $counter := 1 -}}
+{{- range . }}
+{{- if (eq .family "Korbmacher") -}}
+{{- if (ge $counter 2) -}}
+{{- if not (eq $counter $auth_no) -}}
+,&nbsp;
+{{- end -}}
+{{- end -}}
+{{- else -}}
+{{- if (ge $counter 2) -}}
+,&nbsp;
+{{- end -}}
+{{ .given }} {{ with (index . "dropping-particle") }}{{ . }}{{ end }} {{ .family }}
+{{- $counter = add $counter 1 -}}
+{{- end -}}
+{{- end -}})
+{{- end -}}

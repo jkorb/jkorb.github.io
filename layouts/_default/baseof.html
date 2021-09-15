@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description"
+              content="jkorbmacher.org">
+        <meta name="author"
+              content="Johannes Korbmacher">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1.0, user-scalable=yes">
+        <title>jkorbmacher.org</title>
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="icon"
+              type="image/png"
+              href="data:image/png;base64,">
+        <base target="_blank">
+    </head>
+    <body>
+        <div class="content">
+            <div class="header">
+
+                <div id="portrait">
+                    <img src="img/me.png" alt="me" id="me">
+                </div>
+                <div id="details">
+                    <h2>Johannes Korbmacher</h2>
+                    <p>
+                        Assistant professor in theoretical philosophy<br>
+                    </p>
+                    <p>
+                        Department of Philosophy and Religious Studies<br>
+                        Janskerkhof 13<br>
+                        3512 BL Utrecht
+                    </p>
+                    <p>
+                        <a href="mailto:j.korbmacher@uu.nl"><code>j.korbmacher@uu.nl</code></a>
+                    </p>
+                </div>
+            </div>
+            <div class ="main">
+                {{block "main" . }}
+                {{end }}
+            </div>
+        <footer class="footer">
+            &#169;2021 j. korbmacher &nbsp;•&nbsp;
+            hosted on <a href="https://github.com/jkorb/jkorb.github.io">GitHub</a>
+            &nbsp;•&nbsp; created with <a href="https://gohugo.io/">Hugo</a>
+            &nbsp;•&nbsp; I neither collect nor store your data
+        </footer>
+        </div>
+    </body>
+</html>

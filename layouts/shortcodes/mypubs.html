@@ -1,0 +1,48 @@
+{{- $payload := dict -}}
+{{- $publications := getJSON "https://raw.githubusercontent.com/jkorb/mypubs/main/csljson/mypubs.json" -}}
+{{- $helper := slice -}}
+{{- range $publications -}}
+{{- if  .issued -}}
+{{- $helper = $helper | append (dict "id"   .id "year" (index .issued "date-parts" 0 0) ) -}}
+{{- end -}}
+{{- end -}}
+<ul>
+    {{- range sort $helper "year" "desc" -}}
+    {{- if ge .year "2015"}}
+    {{- range where $publications "id" .id -}}
+    {{- if not (eq .type "thesis") -}}
+    <li>
+        {{- $url := "" -}}
+        {{- if .DOI -}}
+        {{- $url = printf "https://doi.org/%s" .DOI -}}
+        {{- else if .URL -}}
+        {{- $url = printf "%s" .URL -}}
+        {{ end }}
+        <a href={{- $url -}}>
+            {{- title .title -}}
+        </a>
+        {{- $payload = .author -}}
+        {{- partial "co-authors.html" $payload -}}.
+        {{ $payload = (dict "id"        .id
+                             "container" (index . "container-title")
+                             "editors"   .editor
+                             "volume"    .volume
+                             "issue"     .issue
+                             "page"      .page
+                             "publisher" .publisher
+                             "place"     (index . "publisher-place")
+                             "genre"     .genre) -}}
+        {{- if eq .type "article-journal" -}}
+        {{- partial "article-journal.html" $payload -}}
+        {{- else if eq .type "chapter" -}}
+        {{- partial "chapter.html" $payload -}}
+        {{- else if eq .type "paper-conference" -}}
+        {{- partial "proceedings.html" $payload -}}
+        {{- end -}},
+        {{ (index .issued "date-parts" 0 0) }}.
+    </li>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+{{ end }}
+</ul>
