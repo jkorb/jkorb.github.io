@@ -15,13 +15,13 @@ I also &#10084; the (philosophy of) mathematics.
 
 Currently, I coordinate:
 
-+ Introduction to Logic (BSc AI, ca. 250) ▶ See [[GitHub]](https://github.com/UtrechtUniversity/KI1V13001-Inleiding-Logica) for course materials
++ Introduction to Logic (BSc AI, ca. 250 students) ▶ See [[GitHub]](https://github.com/UtrechtUniversity/KI1V13001-Inleiding-Logica) for course materials
 + Advanced Logic (BA Phil, ca. 25 students) 
 <!-- ▶ [[GitHub]]() -->
 
 I also coordinate our tutoring program in AI:
 
-+ KI1V14005. Tutoraat Basis (BSc AI)  ▶ [[GitHub]](https://github.com/UtrechtUniversity/KI1V14005-Tutoraat-KI-Basis)
++ Tutoraat Basis (BSc AI) ▶ [[GitHub]](https://github.com/UtrechtUniversity/KI1V14005-Tutoraat-KI-Basis)
 
 ## Research
 
