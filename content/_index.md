@@ -15,8 +15,8 @@ I also &#10084; the (philosophy of) mathematics.
 
 Currently, I coordinate:
 
-+ KI1V13001. Introduction to Logic (BSc AI) ▶ [[GitHub]](https://github.com/UtrechtUniversity/KI1V13001-Inleiding-Logica)
-+ FI3V2005. Advanced Logic (BA Phil) 
++ Introduction to Logic (BSc AI, ca. 250) ▶ See [[GitHub]](https://github.com/UtrechtUniversity/KI1V13001-Inleiding-Logica) for course materials
++ Advanced Logic (BA Phil, ca. 25 students) 
 <!-- ▶ [[GitHub]]() -->
 
 I also coordinate our tutoring program in AI:
