@@ -8,9 +8,8 @@
 {{- end -}}
 <ul>
     {{- range sort $helper "year" "desc" -}}
-    {{- if ge .year "2015"}}
     {{- range where $publications "id" .id -}}
-    {{- if not (eq .type "thesis") -}}
+    {{- if (eq .note "pr") -}}
     <li>
         {{- $url := "" -}}
         {{- if .DOI -}}
@@ -41,7 +40,6 @@
         {{- end -}},
         {{ (index .issued "date-parts" 0 0) }}.
     </li>
-    {{ end }}
     {{ end }}
     {{ end }}
 {{ end }}
