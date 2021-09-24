@@ -16,7 +16,7 @@
         {{- $url = printf "https://doi.org/%s" .DOI -}}
         {{- else if .URL -}}
         {{- $url = printf "%s" .URL -}}
-        {{ end }}
+        {{- end -}}
         <a href={{- $url -}}>
             {{- title .title -}}
         </a>
@@ -40,7 +40,7 @@
         {{- end -}},
         {{ (index .issued "date-parts" 0 0) }}.
     </li>
-    {{ end }}
-    {{ end }}
-{{ end }}
+    {{- end -}}
+    {{- end -}}
+    {{- end -}}
 </ul>
