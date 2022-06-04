@@ -27,6 +27,8 @@ I also coordinate our tutoring program in AI:
 
 **Research interests**: [hyperintensionality](https://plato.stanford.edu/entries/hyperintensionality/) • [mathematical structuralism](https://plato.stanford.edu/entries/structuralism-mathematics/) • [structural realism](https://plato.stanford.edu/entries/structural-realism/)  •  [deontic logic](https://plato.stanford.edu/entries/logic-deontic/) • [metaphysical grounding](https://plato.stanford.edu/entries/grounding/)
 
+**Editorial work**: I recently joined the [Journal of Philosophical Logic](https://www.springer.com/journal/10992/) as associate editor. 
+
 ### Publications
 
 {{< mypubs >}}
