@@ -1,0 +1,14 @@
+{{ define "main"}}
+
+{{ $curPage := .Page }}
+<div class="container">
+  <ul class="list-group shadow">
+    {{ range $curPage.Pages }}
+    <li class="list-group-item list-group-item-action">
+      <a class="link-dark link-underline-light d-none d-sm-block" href="{{.RelPermalink}}">{{ .Title }}</a>
+    </li>
+    {{end}}
+  </ul>
+</div>
+
+{{ end }}

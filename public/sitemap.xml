@@ -2,11 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jkorbmacher.org/</loc>
-    <priority>0</priority>
+    <loc>http://localhost:1313/</loc>
   </url><url>
-    <loc>https://jkorbmacher.org/categories/</loc>
+    <loc>http://localhost:1313/slides/</loc>
   </url><url>
-    <loc>https://jkorbmacher.org/tags/</loc>
+    <loc>http://localhost:1313/categories/</loc>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/slides/prague/</loc>
   </url>
 </urlset>
