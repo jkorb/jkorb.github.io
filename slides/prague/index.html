@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="description"
+      content="jkorbmacher.org">
+    <meta name="author"
+      content="Johannes Korbmacher">
+    <meta name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>jkorbmacher.org</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon"
+      type="image/png"
+      href="data:image/png;base64,">
+    <base target="_blank">
+    <link rel="stylesheet" href="/reveal.js-master/dist/reset.css">
+<link rel="stylesheet" href="/reveal.js-master//dist/reveal.css">
+
+
+
+
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/css/bootstrap-slides.css">
+  </head>
+  <body>
+    <div class="content">
+      
+      
+      <div class="main"><div class="container-fluid reveal" style="aspect-ratio: 16 / 9; max-height: 100vh">
+	<div class="slides" >
+		<section>
+      <h3>The granularity of inquisitive and truthmaker content</h3>
+        <p>J. Korbmacher</p> 
+        <p>Prague</p>
+        <p class="" xmlns:cc="http://creativecommons.org/ns#" style="font-size:0.5em" >
+          This work is licensed under 
+          CC BY 4.0
+          <i class="bi bi-cc-circle"></i> <i class="bi bi-universal-access-circle"></i>
+        </p> 
+    </section>
+    
+<style>
+  .fragment.blur {
+    filter: blur(5px);
+  }
+  .fragment.blur.visible {
+    filter: none;
+  }
+  .fragment.danger {
+    color:  none ;
+  }
+  .fragment.blur.current-fragment {
+  color: none;
+  }
+  .fragment.danger.visible {
+    color:  #dc3545 ;
+  }
+</style>
+
+<section>
+  <dl class="row" >
+    <dt class="col-3"><i class="bi bi-crosshair text-danger"></i> Aim</dt>
+    <dd class="col fragment fade-right">
+      Compare hyperintensional frameworks from a logical perspective.
+    </dd>
+  
+    <dt class="col"></dt><dd class="col">&nbsp;</dd>
+
+    <dt class="col"></dt>
+    <dd class="col fragment fade-right"><i class="bi bi-link"></i> Sedlár (2019), Pascucci & Sedlár (2023)</dd>
+  </dl>
+</section>
+
+
+<section>
+  <section>
+    <h2><i class="bi bi-signpost-split-fill text-success"></i> TOC</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Hyperintensionality</li>
+      <li class="fragment custom blur">Logic</li>
+      <li class="fragment custom blur">Comparison</li>
+      <li class="fragment custom blur">Outlook</li>
+    </ul>
+  </section>
+</section>
+
+
+<section>
+  <section>
+    <h2><i class="bi bi-lightning-charge-fill text-danger"></i>Hyperintensionality</h2>
+  </section>
+
+  <section>
+    <blockquote class="blockquote fs-2">
+      <p>Hyperintensional contexts are simply contexts which do not respect logical equivalence.</p>
+      <figcaption class="blockquote-footer fs-3">
+        Cresswell <cite title="Source Title">'Hyperintensional logic' (1975)</cite>
+      </figcaption>
+    </blockquote>
+    &nbsp;
+    <blockquote class="blockquote fs-2 fragment semi-fade-out" data-fragment-index="2">
+      <p>A hyperintensional concept draws a distinction between <span class="fragment custom danger" data-fragment-index="1">necessarily</span> equivalent contents.</p>
+      <figcaption class="blockquote-footer fs-3">
+        Berto & Nolan in the <cite title="Source Title">SEP (2021)</cite>
+      </figcaption>
+    </blockquote>
+  </section>
+
+  <section>
+     <dl class="row">
+      <dt><i class="bi bi-info-circle text-info"></i> Def.</dt>
+
+      <dd class="fragment fade-right">\(O\) is hyperintensional iff 
+        \[       
+        \phi\dashv\vdash\psi\nRightarrow O(\phi)\dashv\vdash O(\psi)
+        \] 
+      </dd>
+
+      <dt></dt>
+      <dd>
+        <ul>
+          <li class="fragment fade-right">Failure of substitutivity</li>
+          <li class="fragment fade-right">Non-congruential operator</li>
+        </ul>
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <h3>Questions </h3>
+    <p>
+      (Ciardelli, Groenendijk, Roelofsen 2018)
+    </p>
+    <ul>
+      <li class="fragment custom blur">\(?\phi\dashv\vdash \phi\lor\neg \phi\) (Question)
+      <li class="fragment custom blur">\(\phi\lor\neg\phi\dashv\vdash\psi\lor\neg\phi\) (Classicality)
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-arrow-return-right"></i> \(?\phi\dashv\vdash ?\psi \)</li>
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-cloud-lightning-rain-fill text-danger"></i></li>
+     </ul>
+
+  </section>
+
+  <section>
+    <h3>Because</h3>
+    <p>
+      (Fine 2011, Schnieder 2011)
+    </p>
+    <ul>
+      <li class="fragment custom blur">\(\phi< Tr(\ulcorner\phi\urcorner)\) (Aristotle)</li>
+      <li class="fragment custom blur">\(\phi\dashv\vdash Tr(\ulcorner\phi\urcorner)\) (Tarski)
+      <li class="fragment custom blur">\(\phi\dashv\vdash \psi\Rightarrow \theta < \phi \dashv\vdash \theta < \psi\) (Substitutivity)
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-arrow-return-right"></i> \(\phi < \phi \)</li>
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-cloud-lightning-rain-fill text-danger"></i></li>
+     </ul>
+  </section>
+
+  <section>
+    <h3>FCP </h3>
+    <p>
+      (Hilpinen 1982)
+    </p>
+    <ul>
+      <li class="fragment custom blur">\(P(\phi_1\lor\phi_2)\vdash P(\phi_i)\) (FCP)
+      <li class="fragment custom blur">\(\phi\dashv\vdash\psi\Rightarrow P(\phi)\dashv\vdash P(\psi)\) (Substitutivity)
+      <li class="fragment custom blur">\(\phi\dashv\vdash (\phi\land\psi)\lor(\phi\land\neg\psi)\) (Total possibility)
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-arrow-return-right"></i> \(P(\phi) \vdash P(\phi\land\psi) \)</li>
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-cloud-lightning-rain-fill text-danger"></i></li>
+     </ul>
+  </section>
+
+  <section>
+    <h3>SDA</h3>
+    <p>
+      (Ellis, Jackson, & Pargetter 1977)
+    </p>
+    <ul>
+      <li class="fragment custom blur">\((\phi_1\lor\phi_2)>\psi\vdash \phi_i>\psi\) (SDA)
+      <li class="fragment custom blur">\(\phi\dashv\vdash\psi\Rightarrow \phi>\theta\dashv\vdash \psi>\theta\) (Substitutivity)
+      <li class="fragment custom blur">\(\phi\dashv\vdash\phi\lor(\phi\land \psi)\) (Absorption)
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-arrow-return-right"></i> \(\phi>\theta \vdash (\phi\land\psi)>\theta \)</li>
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-cloud-lightning-rain-fill text-danger"></i></li>
+     </ul>
+  </section>
+
+  <section>
+    <h2>Implications</h2>
+   
+    <ul>
+      <li class="fragment custom blur">Logically & philosophically relevant</li>
+      <li class="fragment custom blur">Nolan (2012): <em>Hyperintensional revolution</em></li>
+      <li class="fragment custom blur">Rethink (formal) semantics!</li>
+     </ul>
+
+  </section>
+
+  <section>
+    <h2>Possible-worlds model</h2>
+    <ul>
+      <li class="fragment custom blur">\(\llbracket \phi\rrbracket=\{w:w\vDash\phi\}\) (Propositions)</li>
+      <li class="fragment custom blur"> <i class="bi bi-arrow-return-right"></i> \(\phi \dashv\vdash \psi\Rightarrow\llbracket\phi\rrbracket=\llbracket\psi\rrbracket \)</li>
+      <li class="fragment custom blur">\(\llbracket O(\phi)\rrbracket=f_O(\llbracket\phi\rrbracket)\) (Compositionality)</li>
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-arrow-return-right"></i> \(\phi\dashv\vdash \psi\Rightarrow\llbracket O(\phi)\rrbracket= \llbracket O(\psi)\rrbracket\)</li>
+      <li class="fragment custom blur" style="list-style:none"> <i class="bi bi-cloud-lightning-rain-fill text-danger"></i></li>
+     </ul>
+  </section>
+
+  <section>
+    <h2>The way forward</h2>
+    <ul>
+      <li class="fragment custom blur">Williamson (2021, <em>forthcoming</em>): Wait, I can explain!</li>
+      <li class="fragment custom blur">A <em>scientific</em> revolution!</li>
+      <li class="fragment custom blur">New frameworks: </li>
+      <ul>
+        <li class="fragment custom blur">Truthmaker semantics (Fine & Jago <em>forthcoming</em>)</li>
+        <li class="fragment custom blur">Inquisitive semantics (Ciardelli, Groenendijk, & Roelofsen 2018)</li>
+      </ul>
+     </ul>
+  </section>
+</section>
+
+<section>
+
+  <section>
+    <h2> <i class="bi bi-braces text-info"></i> Logic</h2>
+  </section>
+
+  <section>
+    <h2>Perspectives</h2>
+    <ul>
+      <li class="fragment custom blur" data-fragment-index="1">
+        <span class="fragment semi-fade-out" data-fragment-index="3">
+        Linguistics, metaphysics, CS, ...
+        </span>
+      </li>
+      <li class="fragment custom blur" data-fragment-index="2">Logic <i class="bi bi-arrow-right"></i> valid inference</li>
+     </ul>
+
+  </section>
+
+
+  <section>
+    <h2>Assumptions</h2>
+    <ul>
+      <li class="fragment custom blur">Methodological pluralism</li>
+      <li class="fragment custom blur">Logics are <em>models</em> of valid inference</li>
+      <li class="fragment custom blur">Agnostic about propositions</li>
+     </ul>
+  </section>
+
+  <section>
+    <dl class="row fs-3">
+      <dt class="col-3"><i class="bi bi-info-circle text-info"></i> Def.s</dt>
+      <dd></dd>
+      <dt></dt>
+      <dd>&nbsp;</dd>
+      <dt class="col-3 fragment fade-right" data-fragment-index="2">Logics</dt>
+      <dd class="col fragment fade-right" data-fragment-index="2">
+        <p>
+          \((\mathcal{L},\vdash)\), where \(\vdash~\subseteq \wp(\mathcal{L})\times\mathcal{L}\) is a consequence relation
+        </p>
+      </dd>
+      <dt></dt>
+      <dd>&nbsp;</dd>
+      <dt class="col-3 fragment fade-right" data-fragment-index="3">Models</dt>
+      <dd class="col fragment fade-right" data-fragment-index="3">\((\mathcal{A},C)\), where \(C:\wp(A)\to \wp(A)\) is a closure operator with 
+        \[\Gamma\vdash\phi\Rightarrow \forall h:L\to A,&nbsp; h(\phi)\in C(h(\Gamma))\]
+      </dd>
+
+    </dl>
+
+
+  </section>
+
+  <section>
+    <dl class="row fs-3">
+      <dt class="col"><i class="bi bi-info-circle text-info"></i> Def. <span style="font-weight:normal">(Odintsov & Wansing 2021)</span></dt>
+
+      <dd class="col fragment fade-right">\((\mathcal{L},\vdash)\) is hyperintensional iff \(\exists O\in\mathcal{L}\),
+        \[\phi\dashv\vdash\psi\nRightarrow O(\phi)\dashv\vdash O(\psi)\] 
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <dl class="row container-fluid">
+      <dt class="col-3"><i class="bi bi-crosshair text-danger"></i> Aim</dt>
+      <dd class="col fragment fade-right">
+        Determine a 'natural' relation \(R\) with
+        \[\phi R \psi\Rightarrow O(\phi)\dashv\vdash O(\psi)\]
+      </dd>
+
+      <dt></dt><dd>&nbsp;</dd>
+
+      <dd class="col fragment fade-right"><i class="bi bi-link"></i> Granularity problem (Schwarz & Bjerring 2017)</dd>
+      <dd class="col fragment fade-right"><i class="bi bi-link"></i> Co-hyperintensionality</dd>
+    </dl>
+  </section>
+
+  <section>
+    
+    <ul style="list-style:none">
+      <li class="fragment custom blur"><i class="bi bi-lightbulb-fill text-warning"></i> Algebra</li>
+      <li class="fragment custom blur"><i class="bi bi-emoji-frown-fill text-danger"></i> No Lindenbaum-Tarski algebra</li>
+    </ul>
+
+  </section>
+
+  <section>
+    <dl class="row fs-3">
+      <dt class="col-3"><i class="bi bi-info-circle text-info"></i> Def.s</dt>
+      <dd class="col"></dd>
+      <dt class="col fragment fade-right">Frege relation</dt>
+      <dd class="col fragment fade-right"> 
+        \(\Lambda C=\{(a,b):C(a)=C(b)\}\)
+      </dd>
+      <dt class="col fragment fade-right">Tarski congruence</dt>
+      <dd class="col fragment fade-right"> 
+        \(\tilde{\Omega} C\) the largest\(_\subseteq\) congruence below\(_\subseteq\) \(\Lambda C\)
+      </dd>
+      <dt class="col fragment fade-right">Reduced model</dt>
+      <dd class="col fragment fade-right"> 
+        \(\tilde{\Omega} C=\Delta A\) 
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <dl class="row fs-3">
+      <dt class="col-3"><i class="bi bi-info-circle text-info"></i> Def.s</dt>
+      <dd class="col"></dd>
+      <dt class="col fragment fade-right">Basic full models</dt>
+      <dd class="col fragment fade-right"> 
+        <p>
+        \((A,C)\preceq (A,C')\) iff $C(X)\subseteq C'(X)$
+        </p>
+        Smallest\(_\preceq\) models
+      </dd>
+      <dt class="col fragment fade-right">Full models</dt>
+      <dd class="col fragment fade-right"> 
+        \(\Lambda C\)-quotients of basic full modles
+      </dd>
+    </dl>
+  </section>
+
+  <section>
+    <dl class="row fs-3">
+      <dt class="col"><i class="bi bi-info-circle text-info"></i> Def.s </dt>
+      <dd class="col"></dd>
+      <dt class="col fragment fade-right">Associated algebras <span style="font-weight:normal">(Font 2016)</span></dt>
+      <dd class="col fragment fade-right"> 
+        <p>
+          \(\mathfrak{A}=\{A: (A,C)\text{ is a full reduced model}\}\) 
+        </p>
+      </dd>
+      <dt class="col fragment fade-right"><i class="bi bi-exclamation-octagon-fill text-success"></i> Granularity</dt>
+      <dd class="col fragment fade-right"> 
+        <p>
+          \(\mathfrak{G}\) is the absolutely free (term-)algebra of type \(\mathfrak{A}\) generated by the propositional variables \(\mathcal{P}\):
+        </p>
+       <p class="col fragment fade-right">
+          \(\forall A\in\mathfrak{A}~\forall f:\mathcal{P}\to A~\exists !h:G\to A, h_{\restriction \mathcal{P}}=f\) 
+        </p> 
+      </dd>
+
+    </dl>
+  </section>
+
+  <section>
+    <dl class="row fs-3">
+      <dt class="col"><i class="bi bi-info-circle text-info"></i> Def</dt>
+      <dd class="col"></dd>
+      <dt class="col fragment fade-right">Comparative granularity</dt>
+      <dd class="col fragment fade-right"> 
+        <p>
+          \((\mathcal{L},\vdash_1)\preceq (\mathcal{L},\vdash_2)\) iff \(\exists h:\mathfrak{G}_1\hookrightarrow\mathfrak{G}_2\) 
+        </p>
+      </dd>
+    </dl>
+    <ul>
+      <li class="fragment fade-right">A hyperintensional hierarchy!</li>
+    </ul>
+  </section>
+
+</section>
+
+<section>
+
+  <section>
+    <h2><i class="bi bi-fire text-warning"></i>Comparison</h2>
+  </section>
+
+  <section>
+  <dl class="row" >
+    <dt class="col-3"><i class="bi bi-crosshair text-danger"></i> Aim</dt>
+    <dd class="col fragment fade-right">
+      Investigate hyperintensional capabilities of frameworks 
+    </dd>
+  </dl>
+  </section>
+
+
+  <section>
+    <h2>Inquisitive semantics <i class="bi bi-question-lg text-danger"></i></h2>
+    <ul>
+      <li class="fragment custom blur">Inquisitive propositions (<i class="bi bi-wikipedia"></i>)</li>
+      <ul>
+        <li class="fragment custom blur">Information state: \( s\subseteq W\)</li>
+        <li class="fragment custom blur">Issue: \(I\neq\emptyset\subseteq\wp(W)\), where \[s\in I~\&~t\subseteq s\Rightarrow t\in I\]</li>
+        <li class="fragment custom blur">Proposition: \(P=(s,I)\)</li>
+      </ul>
+      <li class="fragment custom blur">Semantic clauses: \(\llbracket\phi\rrbracket=(s,I)\)</li>
+    </ul>
+  </section>
+
+  <section>
+    <ul>
+      <li >Under the semantics, the inquisitive propositions form a <em>Heyting-algebra</em></li>
+      <li class="fragment custom blur" style="list-style:none"><i class="bi bi-arrow-return-right"></i> \(\mathfrak{G}_{Inq}\nvDash P\lor\neg P=Q\lor\neg Q\) <i class="bi bi-check-square-fill text-success"></i></li>
+      <li class="fragment custom blur" style="list-style:none"><i class="bi bi-arrow-return-right"></i> \(\mathfrak{G}_{Inq}\nvDash P=(P\land Q)\lor(P\land \neg Q)\) <i class="bi bi-check-square-fill text-success"></i></li>
+      <li class="fragment custom blur" style="list-style:none"><i class="bi bi-arrow-return-right"></i> the \((\mathbf{P},\land,\lor)\)-subalgebra is a <em>lattice</em></li>
+      <li class="fragment custom blur" style="list-style:none"><i class="bi bi-arrow-return-right"></i> \(\mathfrak{G}_{Inq}\vDash P=P\lor (P\land Q)\) <i class="bi bi-slash-square-fill text-danger"></i></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="text-warning">\(\Vdash\)</span> Truthmaker semantics</h2>
+    <ul>
+      <li class="fragment custom blur">Truthmaker propositions</li>
+      <ul>
+        <li class="fragment custom blur">State space: \(S,\sqcup\)</li>
+        <li class="fragment custom blur">Condition: \(P\subseteq S\), where \[s,t\in P\Rightarrow s\sqcup t\in P\]</li>
+        <li class="fragment custom blur">Proposition: \((P^+,P^-)\)</li>
+      </ul>
+      <li class="fragment custom blur">Semantic clauses: \(\llbracket\phi\rrbracket=(P^+,P^-)\)</li>
+    </ul>
+
+  </section>
+
+  <section>
+    <ul>
+      <li >Under the semantics, the truthmaker propositions form a <em>De Morgen bisemilattice</em> (Brzozowski 2000)</li>
+      <li class="fragment custom blur" style="list-style:none"><i class="bi bi-arrow-return-right"></i> \(\mathfrak{G}_{Tms}\nvDash P\lor\neg P=Q\lor\neg Q\) <i class="bi bi-check-square-fill text-success"></i></li>
+      <li class="fragment custom blur" style="list-style:none"><i class="bi bi-arrow-return-right"></i> \(\mathfrak{G}_{Tms}\nvDash P=(P\land Q)\lor(P\land \neg Q)\) <i class="bi bi-check-square-fill text-success"></i></li>
+      <li class="fragment custom blur" style="list-style:none"><i class="bi bi-arrow-return-right"></i> \(\mathfrak{G}_{Tms}\nvDash P=P\lor (P\land Q)\) <i class="bi bi-check-square-fill text-success"></i></li>
+    </ul>
+  </section>
+
+</section>
+
+<section>
+
+  <section>
+    <h2><i class="bi bi-search text-success"></i> Outlook</h2>
+  </section>
+
+  <section>
+    <h4>A 'universal' \(\mathfrak{G}\)?</h4>
+    <ul>
+      <li class="fragment custom blur">Hornischer (2017), \(\exists\phi_{1,2},\psi_{1,2},\mathcal{O}_1,\mathcal{O}_2\)</li>
+      <ul>
+        <li class="fragment custom blur">\(\mathcal{O}_1(\phi_1)\dashv\vdash \mathcal{O}_1(\phi_2)\)</li>
+        <li class="fragment custom blur">\(\mathcal{O}_2(\phi_1)\nvdash \mathcal{O}_2(\phi_2)\)</li>
+        <li class="fragment custom blur">\(\mathcal{O}_1(\psi_1)\nvdash \mathcal{O}_1(\psi_2)\)</li>
+        <li class="fragment custom blur">\(\mathcal{O}_2(\psi_1)\dashv\vdash \mathcal{O}_2(\psi_2)\)</li>
+      </ul>
+      <li class="fragment custom blur">\(\mathfrak{G}_1\parallel \mathfrak{G}_2\)</li>
+      <li class="fragment custom blur">\(\mathfrak{G}_0=\mathfrak{G}_1\cap \mathfrak{G}_2\)</li>
+      <li class="fragment custom blur">\(\mathfrak{G}_\bot=\bigcap\mathfrak{G}=\mathcal{L}\)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h1>Thanks <i class="bi bi-rocket-takeoff-fill text-danger"></i></h1>
+  </section>
+
+</section>
+
+	</div>
+</div></div>
+      
+      
+      <script src="/reveal.js-master/dist/reveal.js"></script>
+  <script src="/reveal.js-master/plugin/math/math.js"></script>
+
+
+  
+  
+  <script>
+  Reveal.initialize({
+    
+    plugins: [ RevealMath.KaTeX ],
+    hash: true,
+    embedded: true, 
+    
+  });
+  </script>
+    </div>
+  </body>
+</html>

@@ -4,6 +4,15 @@
     <title>jkorbmacher.org</title>
     <link>https://jkorbmacher.org/</link>
     <description>Recent content on jkorbmacher.org</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://jkorbmacher.org/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="https://jkorbmacher.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The granularity of inquisitive and truthmaker content</title>
+      <link>https://jkorbmacher.org/slides/prague/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jkorbmacher.org/slides/prague/</guid>
+      <description>Aim Compare hyperintensional frameworks from a logical perspective. &amp;nbsp; Sedlár (2019), Pascucci &amp; Sedlár (2023) TOC Hyperintensionality Logic Comparison Outlook Hyperintensionality Hyperintensional contexts are simply contexts which do not respect logical equivalence.&#xA;Cresswell &#39;Hyperintensional logic&#39; (1975) &amp;nbsp; A hyperintensional concept draws a distinction between necessarily equivalent contents.&#xA;Berto &amp; Nolan in the SEP (2021) Def. \(O\) is hyperintensional iff \[ \phi\dashv\vdash\psi\nRightarrow O(\phi)\dashv\vdash O(\psi) \] Failure of substitutivity Non-congruential operator Questions (Ciardelli, Groenendijk, Roelofsen 2018) \(?</description>
+    </item>
   </channel>
 </rss>
