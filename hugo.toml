@@ -1,0 +1,23 @@
+baseURL = "https://jkorbmacher.org/"
+locale = "en-US"
+title = "Johannes Korbmacher"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Johannes Korbmacher is a mathematical philosopher at Utrecht University working on logic, metaphysics, and epistemology."
+  author = "Johannes Korbmacher"
+  email = "j.korbmacher@uu.nl"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = false
+
+[outputs]
+  home = ["HTML"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[minify]
+  minifyOutput = true

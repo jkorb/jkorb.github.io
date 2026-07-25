@@ -1,0 +1,104 @@
+{{ define "main" }}
+  <main id="main-content" class="home">
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">{{ .Title }}</h1>
+      <div class="hero-main">
+        {{ with resources.Get .Params.profile_image }}
+          {{ $portrait := . | fingerprint }}
+          <figure class="portrait">
+            <img
+              src="{{ $portrait.RelPermalink }}"
+              width="{{ $portrait.Width }}"
+              height="{{ $portrait.Height }}"
+              alt="{{ $.Params.profile_alt }}"
+              fetchpriority="high">
+          </figure>
+        {{ end }}
+        <div class="intro">{{ .Content }}</div>
+      </div>
+    </section>
+
+    <div class="lower-grid">
+      <section class="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact</h2>
+        {{ with hugo.Data.contact }}
+          <address>
+            <span>{{ .department }}, {{ .institution }}</span>
+            <span>{{ .building }}, {{ .street }}</span>
+            <span>{{ .postal_code }} {{ .city }}, {{ .country }}</span>
+          </address>
+          <p class="contact-email">
+            <a href="mailto:{{ .email }}">{{ partial "icon.html" "envelope" }}{{ .email }}</a>
+          </p>
+        {{ end }}
+      </section>
+
+      <section class="links-section" aria-labelledby="links-title">
+        <h2 id="links-title">Elsewhere</h2>
+        <ul class="link-list">
+          {{ range where hugo.Data.links "enabled" true }}
+            {{ if .url }}
+              <li>
+                <a class="profile-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+                  {{ partial "icon.html" .icon }}
+                  <span class="profile-link-label">{{ .title }}</span>
+                </a>
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </section>
+
+      <section class="projects-section" aria-labelledby="projects-title">
+        <h2 id="projects-title">Projects</h2>
+        <ul class="link-list project-list">
+          {{ range where hugo.Data.projects "enabled" true }}
+            {{ $visible := partial "project-visible.html" . }}
+            {{ if and .url $visible }}
+              {{ $external := strings.HasPrefix .url "http" }}
+              <li class="project-item">
+                <div class="project-entry">
+                  <span class="project-symbol project-symbol--{{ .icon }}" aria-hidden="true">
+                    {{ if eq .icon "lean-ai" }}
+                      {{ with resources.Get "icons/lean-official.svg" }}
+                        {{ $leanSvg := replace .Content "#070000" "currentColor" }}
+                        {{ $leanSvg = replace $leanSvg "#B7B7B7" "currentColor" }}
+                        <span class="lean-wordmark"><span class="lean-logo">{{ $leanSvg | safeHTML }}</span><span class="lean-spark">✦</span></span>
+                      {{ end }}
+                    {{ else if eq .icon "truthmaker" }}
+                      <span>⊩</span>
+                    {{ end }}
+                  </span>
+                  <a href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .title }}</a>
+                </div>
+                {{ with .description }}<p class="project-description">{{ . }}</p>{{ end }}
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      </section>
+
+      {{ with site.GetPage "section" "slides" }}
+        {{ $slides := where .RegularPages "Params.listed" "ne" false }}
+        {{ if $slides }}
+          <section class="slides-section" aria-labelledby="slides-title">
+            <h2 id="slides-title">Slides</h2>
+            <ul class="link-list">
+              {{ range $slides.ByWeight }}
+                {{ $url := .RelPermalink }}
+                {{ $external := false }}
+                {{ with .Params.external_url }}
+                  {{ $url = . }}
+                  {{ $external = true }}
+                {{ end }}
+                <li>
+                  <a href="{{ $url }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .LinkTitle }}</a>
+                </li>
+              {{ end }}
+            </ul>
+          </section>
+        {{ end }}
+      {{ end }}
+    </div>
+  </main>
+{{ end }}

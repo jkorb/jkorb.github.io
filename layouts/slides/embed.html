@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="description" content="{{ .Description | default site.Params.description }}">
+    <link rel="canonical" href="{{ .Permalink }}">
+    <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
+    <title>{{ .Title }} · {{ site.Title }}</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+
+      body {
+        overflow: hidden;
+        background: #ffffff;
+        font-family: Tahoma, Arial, sans-serif;
+      }
+
+      .slide-frame {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+      }
+
+      .slide-frame iframe {
+        width: 100vw;
+        height: 100vh;
+        border: 0;
+      }
+
+      .site-return {
+        position: fixed;
+        z-index: 1;
+        top: 0.65rem;
+        left: 0.65rem;
+        display: inline-flex;
+        gap: 0.35rem;
+        align-items: center;
+        padding: 0.28rem 0.4rem;
+        border: 1px solid rgb(31 35 40 / 18%);
+        border-radius: 0.35rem;
+        color: #4b5563;
+        background: rgb(255 255 255 / 92%);
+        box-shadow: 0 1px 2px rgb(31 35 40 / 12%);
+        text-decoration: none;
+      }
+
+      .site-return img {
+        display: block;
+        width: 1.35rem;
+        height: 1.35rem;
+      }
+
+      .home-icon {
+        display: inline-flex;
+        width: 0.9rem;
+        height: 0.9rem;
+      }
+
+      .home-icon svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .site-return:focus-visible {
+        outline: 0.16rem solid #54aeff;
+        outline-offset: 0.12rem;
+      }
+    </style>
+  </head>
+  <body>
+    <a class="site-return" href="{{ site.Home.RelPermalink }}" aria-label="Return to jkorbmacher.org">
+      {{ with resources.Get "icons/house.svg" }}
+        <span class="home-icon" aria-hidden="true">{{ .Content | safeHTML }}</span>
+      {{ end }}
+      <img src="{{ "favicon.ico" | relURL }}" alt="">
+    </a>
+    <div class="slide-frame">
+      <iframe
+        src="{{ .Params.embed_url }}"
+        title="{{ .Title }}"
+        allow="fullscreen"
+        allowfullscreen></iframe>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+- title: "Truthmaker Semantics"
+  url: "https://truthmakersemantics.github.io/"
+  icon: "truthmaker"
+  description: |
+    "I co-maintain a website on truthmaker semantics, which aims to promote it
+    as an approach to hyperintensional semantics and provides tools for
+    researchers in the area."
+  enabled: true
+
+- title: "Digital Proof Tools for Philosophical Logic"
+  url: "/projects/digital-proof-tools/"
+  icon: "lean-ai"
+  description: |
+    "This NWO-funded project aims to apply modern digital proof tools,
+    specifically generative AI and the Lean theorem prover, to make progress on
+    open problems in truthmaker semantics."
+  enabled: true

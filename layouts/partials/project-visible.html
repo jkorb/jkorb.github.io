@@ -1,0 +1,5 @@
+{{- if strings.HasPrefix .url "http" -}}
+  true
+{{- else -}}
+  {{- with site.GetPage .url -}}true{{- end -}}
+{{- end -}}

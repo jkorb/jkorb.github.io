@@ -1,0 +1,29 @@
+{{ define "main" }}
+  <main id="main-content" class="project-page">
+    <header class="project-hero">
+      <a class="back-link" href="{{ site.Home.RelPermalink }}">← Home</a>
+      {{ with .Params.status }}<p class="project-status">{{ . }}</p>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<p class="project-subtitle">{{ . }}</p>{{ end }}
+      <dl class="project-meta">
+        {{ with .Params.project_period }}<div><dt>Period</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with .Params.funder }}<div><dt>Supported by</dt><dd>{{ . }}</dd></div>{{ end }}
+      </dl>
+    </header>
+    <article class="prose project-prose">
+      {{ .Content }}
+      {{ with .Params.links }}
+        {{ $links := where . "url" "ne" "" }}
+        {{ with $links }}
+          <h2>Project links</h2>
+          <ul>
+            {{ range . }}
+              <li><a href="{{ .url }}">{{ .label }}</a></li>
+            {{ end }}
+          </ul>
+        {{ end }}
+      {{ end }}
+    </article>
+  </main>
+{{ end }}
+{{ define "footer" }}<!-- This project layout intentionally has no global footer. -->{{ end }}

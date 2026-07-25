@@ -1,0 +1,3 @@
+{{- $external := strings.HasPrefix .Destination "http" -}}
+{{- $pdf := strings.HasSuffix (strings.ToLower .Destination) ".pdf" -}}
+<a href="{{ .Destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ if $pdf }}<span class="external-mark">{{ partial "icon.html" "file-earmark-text" }}</span>{{ else if $external }}<span class="external-mark">{{ partial "icon.html" "box-arrow-up-right" }}</span>{{ end }}{{ .Text | safeHTML }}</a>
