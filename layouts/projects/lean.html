@@ -4,10 +4,15 @@
 
     <header class="project-header">
       <h1>{{ .Title }}</h1>
-      {{ with .Params.subtitle }}<p class="project-summary">{{ . }}</p>{{ end }}
+      {{ with .Params.subtitle }}<div class="project-summary">{{ . | markdownify }}</div>{{ end }}
       {{ if or .Params.funder .Params.project_period }}
         <p class="project-meta">
-          {{ with .Params.funder }}{{ . }}{{ end }}
+          {{ with .Params.funder }}
+            {{ with $.Params.funder_url }}<a href="{{ . }}" target="_blank" rel="noopener noreferrer">{{ end }}
+            {{ with $.Params.funder_url }}<span class="external-mark">{{ partial "icon.html" "box-arrow-up-right" }}</span>{{ end }}
+            {{ . }}
+            {{ with $.Params.funder_url }}</a>{{ end }}
+          {{ end }}
           {{ if and .Params.funder .Params.project_period }}<span aria-hidden="true"> · </span>{{ end }}
           {{ with .Params.project_period }}{{ . }}{{ end }}
         </p>
@@ -30,7 +35,7 @@
                 <div class="milestone-body">
                   <h3>{{ .title }}</h3>
                   <p class="milestone-status">{{ if eq $status "active" }}In progress{{ else }}{{ $status | humanize }}{{ end }}</p>
-                  {{ with .description }}<p>{{ . }}</p>{{ end }}
+                  {{ with .description }}<div class="milestone-description">{{ . | markdownify }}</div>{{ end }}
                   {{ with .url }}<p><a href="{{ . }}">Open milestone output</a></p>{{ end }}
                 </div>
               </li>
@@ -45,7 +50,12 @@
           <ul>
             {{ range . }}
               <li>
-                {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+                {{ if .url }}
+                  {{ $external := strings.HasPrefix .url "http" }}
+                  <a href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>
+                    {{ if $external }}<span class="external-mark">{{ partial "icon.html" "box-arrow-up-right" }}</span>{{ end }}{{ .name }}
+                  </a>
+                {{ else }}{{ .name }}{{ end }}
                 {{ with .role }} — {{ . }}{{ end }}
               </li>
             {{ end }}

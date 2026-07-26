@@ -114,8 +114,11 @@ a page’s front matter to omit it from production while it is being prepared.
 
 Its `milestones` and `collaborators` are maintained in the page front matter.
 Milestone `status` accepts `planned`, `active`, or `complete`; the project
-layout turns these into empty, active, or checked markers. Optional milestone
-and collaborator `url` fields turn their labels into links.
+layout turns these into empty, active, or checked markers. The `subtitle` and
+milestone `description` fields accept Markdown links. An optional milestone
+`url` adds an “Open milestone output” link, while a collaborator `url` links
+the collaborator’s name. `funder_url` links the funder shown in the project
+metadata.
 
 ## Adding slides
 
@@ -147,10 +150,11 @@ hugo server -D -F
 `-D` includes drafts and `-F` includes pages whose `publishDate` is still in the
 future. Do not add `-F` to the production workflow.
 
-The Digital Proof Tools page currently uses `2099-01-01` as a deliberately
-distant placeholder. Replace it in
-`content/projects/digital-proof-tools/index.md` once the actual embargo date is
-known.
+The Digital Proof Tools page is set to publish from 00:00 Europe/Amsterdam on
+1 September 2026. Run the **Build and deploy** workflow manually on or after
+that date to update the live site. If the date changes, update `publishDate` in
+`content/projects/digital-proof-tools/index.md`. Manual deployment is
+documented in `docs/deployment.md`.
 
 ## Images and downloadable files
 

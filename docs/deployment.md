@@ -41,10 +41,12 @@ release. When updating that version, install the same Hugo release locally,
 run the production build, and then change `hugo-version` in the workflow.
 
 The workflow also builds pull requests as a check, but only deploys from
-`main`. It can be started manually from the GitHub Actions interface and runs
-once per day. The daily build ensures that an embargoed page becomes available
-after its `publishDate` even if no new commit is pushed that day. Scheduled
-GitHub Actions runs may start somewhat later than their nominal time.
+`main`. It can be started manually from the GitHub Actions interface.
+
+There are no scheduled deployments. To publish future-dated content, wait until
+after its `publishDate`, open the repository’s **Actions** tab, select
+**Build and deploy**, choose **Run workflow**, and run it from `main`. A normal
+push to `main` after the publication date has the same effect.
 
 ### Initial GitHub Pages configuration
 

@@ -434,6 +434,10 @@ h3 {
   font-size: 1.05rem;
 }
 
+.project-summary p {
+  margin: 0;
+}
+
 .project-meta {
   margin: 0.75rem 0 0;
   color: var(--muted);
@@ -527,6 +531,19 @@ h3 {
 .milestone-body p {
   max-width: 42rem;
   margin: 0.3rem 0 0;
+}
+
+.milestone-description {
+  max-width: 42rem;
+  margin-top: 0.3rem;
+}
+
+.milestone-description > :first-child {
+  margin-top: 0;
+}
+
+.milestone-description > :last-child {
+  margin-bottom: 0;
 }
 
 .milestone-status {
