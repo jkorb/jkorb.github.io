@@ -2,10 +2,10 @@
   --background: #ffffff;
   --foreground: #1f2328;
   --muted: #59636e;
-  --link: #0969da;
-  --link-hover: #0550ae;
+  --link: #6842a0;
+  --link-hover: #5700b8;
   --accent: #4b5563;
-  --title-accent: #6f4b8b;
+  --title-accent: var(--foreground);
   --border: #d1d9e0b3;
   --font: Tahoma, Arial, sans-serif;
   --content-width: 48rem;
