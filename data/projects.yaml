@@ -9,7 +9,7 @@
 
 - title: "Digital Proof Tools for Philosophical Logic"
   url: "/projects/digital-proof-tools/"
-  icon: "lean-ai"
+  icon: "proof-ai"
   description: |
     "This NWO-funded project aims to apply modern digital proof tools,
     specifically generative AI and the Lean theorem prover, to make progress on

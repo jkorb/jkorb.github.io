@@ -46,4 +46,5 @@ The detailed documentation is kept separately:
 ## License notices
 
 The bundled Bootstrap Icons subset is covered by the notices in
-[THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+[static/third-party-notices.txt](static/third-party-notices.txt). Hugo publishes
+that file at `/third-party-notices.txt`.

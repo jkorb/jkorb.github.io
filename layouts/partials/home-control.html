@@ -1,0 +1,6 @@
+<a class="site-return" href="{{ site.Home.RelPermalink }}" aria-label="Return to jkorbmacher.org">
+  {{ with resources.Get "icons/house.svg" }}
+    <span class="home-icon" aria-hidden="true">{{ .Content | safeHTML }}</span>
+  {{ end }}
+  <img src="{{ "favicon.ico" | relURL }}" alt="">
+</a>

@@ -1,29 +1,60 @@
 {{ define "main" }}
   <main id="main-content" class="project-page">
-    <header class="project-hero">
-      <a class="back-link" href="{{ site.Home.RelPermalink }}">← Home</a>
-      {{ with .Params.status }}<p class="project-status">{{ . }}</p>{{ end }}
+    {{ partial "home-control.html" . }}
+
+    <header class="project-header">
       <h1>{{ .Title }}</h1>
-      {{ with .Params.subtitle }}<p class="project-subtitle">{{ . }}</p>{{ end }}
-      <dl class="project-meta">
-        {{ with .Params.project_period }}<div><dt>Period</dt><dd>{{ . }}</dd></div>{{ end }}
-        {{ with .Params.funder }}<div><dt>Supported by</dt><dd>{{ . }}</dd></div>{{ end }}
-      </dl>
+      {{ with .Params.subtitle }}<p class="project-summary">{{ . }}</p>{{ end }}
+      {{ if or .Params.funder .Params.project_period }}
+        <p class="project-meta">
+          {{ with .Params.funder }}{{ . }}{{ end }}
+          {{ if and .Params.funder .Params.project_period }}<span aria-hidden="true"> · </span>{{ end }}
+          {{ with .Params.project_period }}{{ . }}{{ end }}
+        </p>
+      {{ end }}
     </header>
-    <article class="prose project-prose">
+
+    <article class="project-content">
       {{ .Content }}
-      {{ with .Params.links }}
-        {{ $links := where . "url" "ne" "" }}
-        {{ with $links }}
-          <h2>Project links</h2>
+
+      {{ with .Params.milestones }}
+        <section aria-labelledby="milestones-title">
+          <h2 id="milestones-title">Milestones</h2>
+          <ol class="milestone-list">
+            {{ range . }}
+              {{ $status := .status | default "planned" }}
+              <li class="milestone milestone--{{ $status | urlize }}">
+                <span class="milestone-marker" aria-hidden="true">
+                  {{ if eq $status "complete" }}✓{{ else if eq $status "active" }}•{{ end }}
+                </span>
+                <div class="milestone-body">
+                  <h3>{{ .title }}</h3>
+                  <p class="milestone-status">{{ if eq $status "active" }}In progress{{ else }}{{ $status | humanize }}{{ end }}</p>
+                  {{ with .description }}<p>{{ . }}</p>{{ end }}
+                  {{ with .url }}<p><a href="{{ . }}">Open milestone output</a></p>{{ end }}
+                </div>
+              </li>
+            {{ end }}
+          </ol>
+        </section>
+      {{ end }}
+
+      {{ with .Params.collaborators }}
+        <section aria-labelledby="collaborators-title">
+          <h2 id="collaborators-title">Collaborators</h2>
           <ul>
             {{ range . }}
-              <li><a href="{{ .url }}">{{ .label }}</a></li>
+              <li>
+                {{ if .url }}<a href="{{ .url }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}
+                {{ with .role }} — {{ . }}{{ end }}
+              </li>
             {{ end }}
           </ul>
-        {{ end }}
+        </section>
       {{ end }}
     </article>
   </main>
 {{ end }}
-{{ define "footer" }}<!-- This project layout intentionally has no global footer. -->{{ end }}
+{{ define "footer" }}
+  {{ partial "footer.html" . }}
+{{ end }}

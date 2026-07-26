@@ -69,7 +69,7 @@ Use a root-relative URL beginning with `/` for a page in this Hugo site, or a
 complete `https://` URL for an external project. Internal project links remain
 in the same tab; external ones open in a new tab. `icon` selects the project
 mark rendered by `layouts/home.html`; the currently supported values are
-`truthmaker` and `lean-ai`. `description` contains the optional italic text
+`truthmaker` and `proof-ai`. `description` contains the optional italic text
 shown directly beneath that project’s name.
 
 ## Adding an ordinary page
@@ -111,6 +111,11 @@ completely independent design:
 
 The Digital Proof Tools page demonstrates this mechanism. Set `draft: true` in
 a page’s front matter to omit it from production while it is being prepared.
+
+Its `milestones` and `collaborators` are maintained in the page front matter.
+Milestone `status` accepts `planned`, `active`, or `complete`; the project
+layout turns these into empty, active, or checked markers. Optional milestone
+and collaborator `url` fields turn their labels into links.
 
 ## Adding slides
 
@@ -164,5 +169,5 @@ Tahoma-based typography, a white background, Markdown-style heading markers,
 ordinary underlined links, and minimal decoration.
 
 The design is contained in `assets/css/main.css`. The small Bootstrap Icons
-subset is self-hosted in `assets/icons/`; its license is documented in
-`THIRD_PARTY_NOTICES.md`.
+subset is self-hosted in `assets/icons/`; its license and the site’s other
+third-party notices are published from `static/third-party-notices.txt`.

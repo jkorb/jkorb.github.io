@@ -28,9 +28,7 @@
     <a class="skip-link" href="#main-content">Skip to content</a>
     {{ block "main" . }}{{ end }}
     {{ block "footer" . }}
-      <footer class="site-footer">
-        <p>&copy; {{ now.Year }} {{ site.Params.author }}</p>
-      </footer>
+      {{ partial "footer.html" . }}
     {{ end }}
   </body>
 </html>

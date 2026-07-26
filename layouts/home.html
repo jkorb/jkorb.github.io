@@ -59,12 +59,10 @@
               <li class="project-item">
                 <div class="project-entry">
                   <span class="project-symbol project-symbol--{{ .icon }}" aria-hidden="true">
-                    {{ if eq .icon "lean-ai" }}
-                      {{ with resources.Get "icons/lean-official.svg" }}
-                        {{ $leanSvg := replace .Content "#070000" "currentColor" }}
-                        {{ $leanSvg = replace $leanSvg "#B7B7B7" "currentColor" }}
-                        <span class="lean-wordmark"><span class="lean-logo">{{ $leanSvg | safeHTML }}</span><span class="lean-spark">✦</span></span>
-                      {{ end }}
+                    {{ if eq .icon "proof-ai" }}
+                      <span class="proof-ai-symbol">
+                        <span class="proof-ai-core">λ</span><span class="proof-ai-spark">✦</span>
+                      </span>
                     {{ else if eq .icon "truthmaker" }}
                       <span>⊩</span>
                     {{ end }}
