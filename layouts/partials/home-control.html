@@ -1,4 +1,4 @@
-<a class="site-return" href="{{ site.Home.RelPermalink }}" aria-label="Return to jkorbmacher.org">
+<a class="site-return" href="{{ site.Home.RelPermalink }}" aria-label="{{ i18n "return_home" }}">
   {{ with resources.Get "icons/house.svg" }}
     <span class="home-icon" aria-hidden="true">{{ .Content | safeHTML }}</span>
   {{ end }}

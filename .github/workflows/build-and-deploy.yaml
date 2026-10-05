@@ -33,18 +33,17 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build website
-        run: hugo --minify --gc --cleanDestinationDir
+        run: hugo --minify --gc --cleanDestinationDir --printI18nWarnings --panicOnWarning
 
-      # The CV remains in Dropbox and is added only to the temporary deployment
-      # artifact. It is never committed to this repository or its Git history.
-      - name: Add current CV to deployment
-        env:
-          CV_URL: "https://www.dropbox.com/scl/fi/n343d854vk9925gelwrpd/cv_jkorbmacher.pdf?rlkey=91lyvzktxrfj8uegmwdcx8ate&dl=1"
-        run: |
-          curl --fail --location --retry 3 --silent --show-error \
-            "$CV_URL" \
-            --output public/cv_jkorbmacher.pdf
-          test "$(head -c 4 public/cv_jkorbmacher.pdf)" = "%PDF"
+      - name: Test CV download validation
+        run: python3 scripts/test-fetch-cvs.py
+
+      # PDFs are downloaded only into the temporary deployment artifact.
+      - name: Add current CVs to deployment
+        run: python3 scripts/fetch-cvs.py
+
+      - name: Check translated pages and CVs
+        run: python3 scripts/check-site.py --require-cvs
 
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v4

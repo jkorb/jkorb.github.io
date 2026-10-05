@@ -20,12 +20,12 @@
 
     <div class="lower-grid">
       <section class="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Contact</h2>
+        <h2 id="contact-title">{{ i18n "contact" }}</h2>
         {{ with hugo.Data.contact }}
           <address>
             <span>{{ .department }}, {{ .institution }}</span>
-            <span>{{ .building }}, {{ .street }}</span>
-            <span>{{ .postal_code }} {{ .city }}, {{ .country }}</span>
+            <span>{{ .building }}, {{ i18n "floor" }}, {{ .street }}</span>
+            <span>{{ .postal_code }} {{ .city }}, {{ i18n "country" }}</span>
           </address>
           <p class="contact-email">
             <a href="mailto:{{ .email }}">{{ partial "icon.html" "envelope" }}{{ .email }}</a>
@@ -34,7 +34,7 @@
       </section>
 
       <section class="links-section" aria-labelledby="links-title">
-        <h2 id="links-title">Elsewhere</h2>
+        <h2 id="links-title">{{ i18n "elsewhere" }}</h2>
         <ul class="link-list">
           {{ range where hugo.Data.links "enabled" true }}
             {{ if .url }}
@@ -50,12 +50,16 @@
       </section>
 
       <section class="projects-section" aria-labelledby="projects-title">
-        <h2 id="projects-title">Projects</h2>
+        <h2 id="projects-title">{{ i18n "projects" }}</h2>
         <ul class="link-list project-list">
           {{ range where hugo.Data.projects "enabled" true }}
             {{ $visible := partial "project-visible.html" . }}
             {{ if and .url $visible }}
               {{ $external := strings.HasPrefix .url "http" }}
+              {{ $url := .url }}
+              {{ if not $external }}
+                {{ with site.GetPage .url }}{{ $url = .RelPermalink }}{{ end }}
+              {{ end }}
               <li class="project-item">
                 <div class="project-entry">
                   <span class="project-symbol project-symbol--{{ .icon }}" aria-hidden="true">
@@ -67,9 +71,9 @@
                       <span>⊩</span>
                     {{ end }}
                   </span>
-                  <a href="{{ .url }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .title }}</a>
+                  <a href="{{ $url }}"{{ if $external }} target="_blank" rel="noopener noreferrer"{{ end }}>{{ .title }}</a>
                 </div>
-                {{ with .description }}<p class="project-description">{{ . }}</p>{{ end }}
+                {{ with .description_key }}<p class="project-description">{{ i18n . }}</p>{{ end }}
               </li>
             {{ end }}
           {{ end }}
@@ -80,7 +84,7 @@
         {{ $slides := where .RegularPages "Params.listed" "ne" false }}
         {{ if $slides }}
           <section class="slides-section" aria-labelledby="slides-title">
-            <h2 id="slides-title">Slides</h2>
+            <h2 id="slides-title">{{ i18n "slides" }}</h2>
             <ul class="link-list">
               {{ range $slides.ByWeight }}
                 {{ $url := .RelPermalink }}

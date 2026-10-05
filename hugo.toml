@@ -1,5 +1,6 @@
 baseURL = "https://jkorbmacher.org/"
-locale = "en-US"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
 title = "Johannes Korbmacher"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
@@ -21,3 +22,27 @@ disableKinds = ["taxonomy", "term"]
 
 [minify]
   minifyOutput = true
+
+[languages.en]
+  locale = "en-US"
+  weight = 1
+  [languages.en.params]
+    language_name = "English (US)"
+[languages.de]
+  locale = "de-DE"
+  weight = 2
+  [languages.de.params]
+    language_name = "Deutsch"
+    description = "Johannes Korbmacher ist mathematischer Philosoph an der Utrecht University und forscht zu Logik, Metaphysik und Erkenntnistheorie."
+[languages.nl]
+  locale = "nl-NL"
+  weight = 3
+  [languages.nl.params]
+    language_name = "Nederlands"
+    description = "Johannes Korbmacher is wiskundig filosoof aan Utrecht University en doet onderzoek naar logica, metafysica en epistemologie."
+[languages.it]
+  locale = "it-IT"
+  weight = 4
+  [languages.it.params]
+    language_name = "Italiano"
+    description = "Johannes Korbmacher è un filosofo matematico presso Utrecht University e si occupa di logica, metafisica ed epistemologia."

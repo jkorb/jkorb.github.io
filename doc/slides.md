@@ -2,8 +2,8 @@
 
 ## How the homepage list works
 
-The homepage automatically lists published pages from `content/slides/` under
-“Slides”. There is no separate YAML list to keep synchronized.
+The homepage automatically lists published pages from `content/slides/` for the
+current language under “Slides”. There is no separate YAML list to synchronize.
 
 Each slide entry supports these front-matter fields:
 
@@ -42,11 +42,15 @@ Edit the generated file, replace `embed_url`, and preview it with:
 hugo server -D -F
 ```
 
-When it is ready, set `draft: false`. The link then appears automatically on
-the homepage.
+Create `.de.md`, `.nl.md`, and `.it.md` counterparts. Translate the description;
+keep the talk title, embed URL, and publication settings consistent. See
+[internationalization](internationalization.md). When ready, set `draft: false`
+in each language and update `scripts/check-site.py` for the new route. Links
+appear automatically on the corresponding homepages.
 
 The iframe page includes a small clickable favicon in the upper-left corner
-that returns to `jkorbmacher.org`. Its template is
+that returns to the current language’s homepage, plus the language control in
+the upper-right corner. Its template is
 `layouts/slides/embed.html`.
 
 Not every external website permits embedding. A provider can block iframes

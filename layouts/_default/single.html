@@ -1,7 +1,7 @@
 {{ define "main" }}
   <main id="main-content" class="page">
     <header class="page-header">
-      <p class="eyebrow">{{ .Section | humanize }}</p>
+      <p class="eyebrow">{{ .CurrentSection.Title }}</p>
       <h1>{{ .Title }}</h1>
       {{ with .Description }}<p class="lede">{{ . }}</p>{{ end }}
     </header>

@@ -11,4 +11,4 @@ I am a member of the [logic group](https://logic-utrecht.nl/) at Utrecht Univers
 
 I mainly lecture in Artificial Intelligence and Philosophy. I wrote an undergraduate logic textbook for AI, which is freely accessible under [https://logicalmethods.ai](https://logicalmethods.ai/).
 
-[Recent CV](https://jkorbmacher.org/cv_jkorbmacher.pdf)
+{{< cv >}}

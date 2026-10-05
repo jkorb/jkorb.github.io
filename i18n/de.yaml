@@ -1,0 +1,40 @@
+profession:
+  other: "Mathematischer Philosoph"
+skip_content:
+  other: "Zum Inhalt springen"
+third_party_notices:
+  other: "Hinweise zu Drittanbietern"
+return_home:
+  other: "Zurück zu jkorbmacher.org"
+language:
+  other: "Sprache"
+contact:
+  other: "Kontakt"
+elsewhere:
+  other: "Weitere Profile"
+projects:
+  other: "Projekte"
+slides:
+  other: "Vortragsfolien"
+floor:
+  other: "3. Stock"
+country:
+  other: "Niederlande"
+milestones:
+  other: "Meilensteine"
+collaborators:
+  other: "Projektpartner"
+status_planned:
+  other: "Geplant"
+status_active:
+  other: "In Bearbeitung"
+status_complete:
+  other: "Abgeschlossen"
+open_output:
+  other: "Ergebnis des Meilensteins öffnen"
+recent_cv:
+  other: "Aktueller Lebenslauf"
+truthmaker_description:
+  other: "Ich betreue eine Website zur Wahrmachersemantik mit. Sie soll diesen Ansatz zur hyperintensionalen Semantik fördern und stellt Forschenden auf diesem Gebiet Werkzeuge zur Verfügung."
+proof_tools_description:
+  other: "Dieses von NWO geförderte Projekt setzt moderne digitale Beweiswerkzeuge ein, insbesondere generative KI und den Beweisassistenten Lean, um Fortschritte bei offenen Problemen der Wahrmachersemantik zu erzielen."

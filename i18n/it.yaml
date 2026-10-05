@@ -1,0 +1,40 @@
+profession:
+  other: "Filosofo matematico"
+skip_content:
+  other: "Vai al contenuto"
+third_party_notices:
+  other: "Avvisi relativi a terze parti"
+return_home:
+  other: "Torna a jkorbmacher.org"
+language:
+  other: "Lingua"
+contact:
+  other: "Contatti"
+elsewhere:
+  other: "Altri profili"
+projects:
+  other: "Progetti"
+slides:
+  other: "Presentazioni"
+floor:
+  other: "3º piano"
+country:
+  other: "Paesi Bassi"
+milestones:
+  other: "Tappe del progetto"
+collaborators:
+  other: "Collaboratori"
+status_planned:
+  other: "In programma"
+status_active:
+  other: "In corso"
+status_complete:
+  other: "Completato"
+open_output:
+  other: "Apri il risultato della tappa"
+recent_cv:
+  other: "CV aggiornato"
+truthmaker_description:
+  other: "Gestisco insieme ad altri un sito sulla semantica dei verificatori, volto a promuoverla come approccio alla semantica iperintensionale e a fornire strumenti a chi fa ricerca in questo ambito."
+proof_tools_description:
+  other: "Questo progetto finanziato da NWO mira a utilizzare moderni strumenti digitali di dimostrazione, in particolare l’IA generativa e l’assistente alla dimostrazione Lean, per progredire su problemi aperti nella semantica dei verificatori."

@@ -1,0 +1,40 @@
+profession:
+  other: "Mathematical philosopher"
+skip_content:
+  other: "Skip to content"
+third_party_notices:
+  other: "Third-party notices"
+return_home:
+  other: "Return to jkorbmacher.org"
+language:
+  other: "Language"
+contact:
+  other: "Contact"
+elsewhere:
+  other: "Elsewhere"
+projects:
+  other: "Projects"
+slides:
+  other: "Slides"
+floor:
+  other: "3rd floor"
+country:
+  other: "The Netherlands"
+milestones:
+  other: "Milestones"
+collaborators:
+  other: "Collaborators"
+status_planned:
+  other: "Planned"
+status_active:
+  other: "In progress"
+status_complete:
+  other: "Complete"
+open_output:
+  other: "Open milestone output"
+recent_cv:
+  other: "Recent CV"
+truthmaker_description:
+  other: "I co-maintain a website on truthmaker semantics, which aims to promote it as an approach to hyperintensional semantics and provides tools for researchers in the area."
+proof_tools_description:
+  other: "This NWO-funded project aims to apply modern digital proof tools, specifically generative AI and the Lean theorem prover, to make progress on open problems in truthmaker semantics."

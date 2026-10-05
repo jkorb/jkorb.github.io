@@ -1,0 +1,40 @@
+profession:
+  other: "Wiskundig filosoof"
+skip_content:
+  other: "Naar de inhoud"
+third_party_notices:
+  other: "Vermeldingen van derden"
+return_home:
+  other: "Terug naar jkorbmacher.org"
+language:
+  other: "Taal"
+contact:
+  other: "Contact"
+elsewhere:
+  other: "Andere profielen"
+projects:
+  other: "Projecten"
+slides:
+  other: "Presentaties"
+floor:
+  other: "3e verdieping"
+country:
+  other: "Nederland"
+milestones:
+  other: "Mijlpalen"
+collaborators:
+  other: "Projectpartners"
+status_planned:
+  other: "Gepland"
+status_active:
+  other: "In uitvoering"
+status_complete:
+  other: "Voltooid"
+open_output:
+  other: "Resultaat van de mijlpaal openen"
+recent_cv:
+  other: "Recent cv"
+truthmaker_description:
+  other: "Ik beheer samen met anderen een website over waarmakersemantiek. De website bevordert deze benadering van hyperintensionele semantiek en biedt hulpmiddelen voor onderzoekers op dit gebied."
+proof_tools_description:
+  other: "Dit door NWO gefinancierde project zet moderne digitale bewijshulpmiddelen in, met name generatieve AI en de bewijsassistent Lean, om vooruitgang te boeken bij open problemen in de waarmakersemantiek."

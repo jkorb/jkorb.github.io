@@ -1,0 +1,2 @@
+{{- $cv := index hugo.Data.cv .Page.Language.Lang -}}
+<a href="{{ $cv.path | relURL }}"><span class="external-mark">{{ partial "icon.html" "file-earmark-text" }}</span>{{ i18n "recent_cv" }}</a>

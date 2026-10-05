@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light">
     <meta name="description" content="{{ .Description | default site.Params.description }}">
+    {{ partial "language-alternates.html" . }}
+    {{ $languages := resources.Get "css/languages.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $languages.RelPermalink }}" integrity="{{ $languages.Data.Integrity }}">
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
     <title>{{ .Title }} · {{ site.Title }}</title>
@@ -78,8 +81,9 @@
       }
     </style>
   </head>
-  <body>
+  <body class="slide-viewer">
     {{ partial "home-control.html" . }}
+    {{ partial "languages.html" . }}
     <div class="slide-frame">
       <iframe
         src="{{ .Params.embed_url }}"

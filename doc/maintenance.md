@@ -7,7 +7,9 @@ served by GitHub Pages.
 
 | Path | Purpose |
 | --- | --- |
-| `content/_index.md` | Homepage title, introduction, and profile-image settings |
+| `content/_index*.md` | Homepage translations, title, introduction, and profile-image settings |
+| `i18n/*.yaml` | Translated labels and project summaries |
+| `data/cv.json` | Language-specific CV sources and public paths |
 | `data/contact.yaml` | Postal address and email address |
 | `data/links.yaml` | Links shown under “Elsewhere” |
 | `data/projects.yaml` | Links shown under “Projects” |
@@ -15,7 +17,7 @@ served by GitHub Pages.
 | `content/slides/` | Slide entries discovered automatically by the homepage |
 | `layouts/slides/` | Independent layouts used by slide pages |
 | `layouts/` | HTML templates, including the minimal base layout |
-| `assets/css/main.css` | The complete visual design |
+| `assets/css/` | Site layout and shared language-control styling |
 | `assets/images/me.png` | Source profile photograph |
 | `assets/icons/` | Self-hosted SVG icons |
 | `static/` | Files copied unchanged to the finished site |
@@ -23,7 +25,9 @@ served by GitHub Pages.
 
 ## Editing the homepage
 
-Edit `content/_index.md`. The front matter between the `---` lines controls the
+Edit `content/_index.md` and its `.de.md`, `.nl.md`, and `.it.md` counterparts.
+Keep facts synchronized across languages. The `{{< cv >}}` shortcode selects the
+matching CV automatically. The front matter between the `---` lines controls the
 title, description used by search engines, and profile image. The text below
 the front matter is ordinary Markdown.
 
@@ -33,7 +37,8 @@ the small external-link indicator. Internal links remain in the same tab.
 ## Editing contact information
 
 Edit `data/contact.yaml`. The homepage template reads this file directly, so
-the contact details do not need to be duplicated in HTML.
+the contact details do not need to be duplicated in HTML. Floor and country
+labels are translated in `i18n/*.yaml`; official address names remain shared.
 
 Keep the existing field names unless the corresponding markup in
 `layouts/home.html` is also updated.
@@ -61,7 +66,7 @@ Elsewhere links:
 - title: "Project title"
   url: "/projects/project-name/"
   icon: "truthmaker"
-  description: "A short description shown below this project name."
+  description_key: "new_project_description"
   enabled: true
 ```
 
@@ -69,8 +74,9 @@ Use a root-relative URL beginning with `/` for a page in this Hugo site, or a
 complete `https://` URL for an external project. Internal project links remain
 in the same tab; external ones open in a new tab. `icon` selects the project
 mark rendered by `layouts/home.html`; the currently supported values are
-`truthmaker` and `proof-ai`. `description` contains the optional italic text
-shown directly beneath that project’s name.
+`truthmaker` and `proof-ai`. `description_key` names an entry in each
+`i18n/*.yaml` file containing the optional italic text shown beneath the project
+name. Add the key in all four languages.
 
 ## Adding an ordinary page
 
@@ -87,11 +93,14 @@ hugo server -D
 ```
 
 The `-D` flag includes drafts. Change `draft: true` to `draft: false` when the
-page is ready to publish, then add a link to it from `data/links.yaml` or another
+page is ready to publish. Add translations as described in
+[internationalization](internationalization.md), update the route checks in
+`scripts/check-site.py`, then add a link to it from `data/links.yaml` or another
 appropriate content page. There is deliberately no global menu.
 
 To remove a temporary page from the public site without deleting your work,
-set `draft: true` again or remove its public link.
+set `draft: true` in each translation. Removing a link alone does not unpublish
+the page or remove it from search-engine indexes.
 
 ## Adding a project page
 
@@ -153,8 +162,8 @@ future. Do not add `-F` to the production workflow.
 The Digital Proof Tools page is set to publish from 00:00 Europe/Amsterdam on
 1 September 2026. Run the **Build and deploy** workflow manually on or after
 that date to update the live site. If the date changes, update `publishDate` in
-`content/projects/digital-proof-tools/index.md`. Manual deployment is
-documented in `docs/deployment.md`.
+all `content/projects/digital-proof-tools/index*.md` files. Manual deployment is
+documented in `doc/deployment.md`.
 
 ## Images and downloadable files
 
@@ -164,7 +173,7 @@ documented in `docs/deployment.md`.
   `https://jkorbmacher.org/slides/talk.pdf`.
 
 The CV is handled differently so that its binary data is not committed to Git.
-See [Deployment and CV hosting](deployment.md#updating-the-cv).
+See [Deployment and CV hosting](deployment.md#updating-cv-releases).
 
 ## Design implementation
 
@@ -172,6 +181,7 @@ The homepage aims for the density and directness of a well-maintained README:
 Tahoma-based typography, a white background, Markdown-style heading markers,
 ordinary underlined links, and minimal decoration.
 
-The design is contained in `assets/css/main.css`. The small Bootstrap Icons
+The design is contained in `assets/css/main.css` and `assets/css/languages.css`.
+See [Design](design.md) for the rationale. The small Bootstrap Icons
 subset is self-hosted in `assets/icons/`; its license and the site’s other
 third-party notices are published from `static/third-party-notices.txt`.

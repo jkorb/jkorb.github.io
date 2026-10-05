@@ -24,7 +24,7 @@
 
       {{ with .Params.milestones }}
         <section aria-labelledby="milestones-title">
-          <h2 id="milestones-title">Milestones</h2>
+          <h2 id="milestones-title">{{ i18n "milestones" }}</h2>
           <ol class="milestone-list">
             {{ range . }}
               {{ $status := .status | default "planned" }}
@@ -34,9 +34,9 @@
                 </span>
                 <div class="milestone-body">
                   <h3>{{ .title }}</h3>
-                  <p class="milestone-status">{{ if eq $status "active" }}In progress{{ else }}{{ $status | humanize }}{{ end }}</p>
+                  <p class="milestone-status">{{ i18n (printf "status_%s" $status) }}</p>
                   {{ with .description }}<div class="milestone-description">{{ . | markdownify }}</div>{{ end }}
-                  {{ with .url }}<p><a href="{{ . }}">Open milestone output</a></p>{{ end }}
+                  {{ with .url }}<p><a href="{{ . }}">{{ i18n "open_output" }}</a></p>{{ end }}
                 </div>
               </li>
             {{ end }}
@@ -46,7 +46,7 @@
 
       {{ with .Params.collaborators }}
         <section aria-labelledby="collaborators-title">
-          <h2 id="collaborators-title">Collaborators</h2>
+          <h2 id="collaborators-title">{{ i18n "collaborators" }}</h2>
           <ul>
             {{ range . }}
               <li>

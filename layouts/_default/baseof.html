@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light">
-    <meta name="theme-color" content="#f7f6f2">
+    <meta name="theme-color" content="#ffffff">
     <meta name="author" content="{{ site.Params.author }}">
     <meta name="description" content="{{ .Description | default site.Params.description }}">
     <meta property="og:type" content="website">
@@ -18,14 +18,16 @@
     <meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}">
     <meta name="twitter:description" content="{{ .Description | default site.Params.description }}">
     <meta name="twitter:image" content="{{ "og.png" | absURL }}">
+    {{ partial "language-alternates.html" . }}
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
-    {{ $styles := resources.Get "css/main.css" | minify | fingerprint }}
+    {{ $styles := slice (resources.Get "css/main.css") (resources.Get "css/languages.css") | resources.Concat "css/site.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
-    <title>{{ if .IsHome }}{{ site.Title }} · Mathematical philosopher{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+    <title>{{ if .IsHome }}{{ site.Title }} · {{ i18n "profession" }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
   </head>
   <body class="{{ with .Type }}type-{{ . | urlize }}{{ end }}{{ with .Layout }} layout-{{ . | urlize }}{{ end }}">
-    <a class="skip-link" href="#main-content">Skip to content</a>
+    <a class="skip-link" href="#main-content">{{ i18n "skip_content" }}</a>
+    {{ partial "languages.html" . }}
     {{ block "main" . }}{{ end }}
     {{ block "footer" . }}
       {{ partial "footer.html" . }}
