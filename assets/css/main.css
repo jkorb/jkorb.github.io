@@ -5,9 +5,7 @@
   --link: #0969da;
   --link-hover: #0550ae;
   --accent: #4b5563;
-  --title-accent: var(--foreground);
   --border: #d1d9e0b3;
-  --font: Tahoma, Arial, sans-serif;
   --content-width: 48rem;
 }
 
@@ -94,7 +92,11 @@ a:focus-visible {
 
 h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
   font-weight: 700;
   line-height: 1.25;
 }
@@ -113,12 +115,6 @@ h3 {
   font-size: 1.25rem;
 }
 
-.home h1::before,
-.home h2::before {
-  color: var(--accent);
-  font-weight: 700;
-}
-
 .home h1 {
   margin-bottom: 1.25rem;
 }
@@ -126,17 +122,6 @@ h3 {
 .home h2 {
   padding-bottom: 0.3em;
   border-bottom: 1px solid var(--border);
-}
-
-.home h1::before {
-  color: var(--title-accent);
-  margin-right: 0.45rem;
-  content: "#";
-}
-
-.home h2::before {
-  margin-right: 0.5rem;
-  content: "##";
 }
 
 .intro {
@@ -422,12 +407,6 @@ h3 {
   font-size: 2rem;
 }
 
-.project-header h1::before {
-  margin-right: 0.45rem;
-  color: var(--foreground);
-  content: "#";
-}
-
 .project-summary {
   max-width: 44rem;
   margin: 0;
@@ -459,12 +438,6 @@ h3 {
 .project-content h2 {
   padding-bottom: 0.3em;
   border-bottom: 1px solid var(--border);
-}
-
-.project-content h2::before {
-  margin-right: 0.5rem;
-  color: var(--accent);
-  content: "##";
 }
 
 .milestone-list {

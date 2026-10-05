@@ -19,6 +19,6 @@ Start with the [agent guide](../AGENTS.md) for working rules.
 | Edit project text and milestones | `content/projects/digital-proof-tools/index*.md` |
 | Update CV releases | `data/cv.json` |
 | Replace portrait | `assets/images/me.png` |
-| Change styling | `assets/css/main.css`, `assets/css/languages.css` |
+| Change styling | `assets/css/main.css`, `assets/css/languages.css`, `assets/css/fonts.css` |
 | Change languages or site defaults | `hugo.toml` |
 | Publish | [Deployment](deployment.md) |

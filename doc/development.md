@@ -4,8 +4,8 @@
 
 Hugo reads `hugo.toml`, language-specific Markdown in `content/`, shared records
 in `data/`, and interface translations in `i18n/`. The templates in `layouts/`
-produce static HTML. Hugo concatenates, minifies, and fingerprints the main and
-language CSS. It fingerprints the portrait and inlines the small local SVG icon
+produce static HTML. Hugo concatenates, minifies, and fingerprints the font, main, and
+language CSS. WOFF2 font files and licenses are self-hosted in `static/fonts/`. It fingerprints the portrait and inlines the small local SVG icon
 set. `static/` is copied unchanged; the legal notices retain their original text.
 
 The homepage is `layouts/home.html`, built on `_default/baseof.html`. The base

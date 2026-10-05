@@ -178,10 +178,11 @@ See [Deployment and CV hosting](deployment.md#updating-cv-releases).
 ## Design implementation
 
 The homepage aims for the density and directness of a well-maintained README:
-Tahoma-based typography, a white background, Markdown-style heading markers,
+Open Sans body text, plain Merriweather headings, a white background,
 ordinary underlined links, and minimal decoration.
 
-The design is contained in `assets/css/main.css` and `assets/css/languages.css`.
+The design is contained in `assets/css/main.css`, `assets/css/languages.css`, and
+`assets/css/fonts.css`.
 See [Design](design.md) for the rationale. The small Bootstrap Icons
 subset is self-hosted in `assets/icons/`; its license and the site’s other
 third-party notices are published from `static/third-party-notices.txt`.

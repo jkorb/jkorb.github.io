@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light">
     <meta name="description" content="{{ .Description | default site.Params.description }}">
     {{ partial "language-alternates.html" . }}
-    {{ $languages := resources.Get "css/languages.css" | minify | fingerprint }}
+    {{ $languages := slice (resources.Get "css/fonts.css") (resources.Get "css/languages.css") | resources.Concat "css/slide-controls.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $languages.RelPermalink }}" integrity="{{ $languages.Data.Integrity }}">
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
@@ -22,7 +22,7 @@
       body {
         overflow: hidden;
         background: #ffffff;
-        font-family: Tahoma, Arial, sans-serif;
+        font-family: var(--font);
       }
 
       .slide-frame {

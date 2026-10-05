@@ -21,7 +21,7 @@
     {{ partial "language-alternates.html" . }}
     <link rel="canonical" href="{{ .Permalink }}">
     <link rel="icon" href="{{ "favicon.ico" | relURL }}" sizes="any">
-    {{ $styles := slice (resources.Get "css/main.css") (resources.Get "css/languages.css") | resources.Concat "css/site.css" | minify | fingerprint }}
+    {{ $styles := slice (resources.Get "css/fonts.css") (resources.Get "css/main.css") (resources.Get "css/languages.css") | resources.Concat "css/site.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}" integrity="{{ $styles.Data.Integrity }}">
     <title>{{ if .IsHome }}{{ site.Title }} · {{ i18n "profession" }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
   </head>

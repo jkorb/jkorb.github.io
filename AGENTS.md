@@ -5,15 +5,17 @@ and [doc/design.md](doc/design.md). The parent workspace contains historical
 material; do not copy it into the site.
 
 - Hugo with custom templates, plain CSS, Markdown, and small data files. No theme,
-  runtime JavaScript, package manager, remote fonts, or icon CDN.
+  runtime JavaScript, package manager, remote fonts, or icon CDN. Fonts are
+  self-hosted in `static/fonts/` with their licenses.
 - US English is the default at `/`; German, Dutch, and Italian use `/de/`, `/nl/`,
   and `/it/`. English Markdown has no language suffix; translations have `.de`,
   `.nl`, or `.it` before `.md`. Shared interface text is in `i18n/*.yaml`.
 - Translate prose, metadata, image descriptions, and accessibility labels. Keep
   publication/project titles, official names, people, URLs, and identifiers intact.
   Update all translations when changing a factual claim or publication setting.
-- Preserve the minimalist README-like appearance: Tahoma, white background,
-  dark text, blue links, grayscale portrait, restrained heading markers. Keep the
+- Preserve the minimalist README-like appearance: Open Sans body text, Merriweather headings,
+  white background,
+  dark text, blue links, grayscale portrait, and plain headings. Keep the
   compact language links usable by keyboard and without JavaScript.
 - `data/cv.json` is the single source for public CV paths and Dropbox URLs. The
   `cv` shortcode links the current language's PDF. PDFs belong only in build

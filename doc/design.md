@@ -11,11 +11,13 @@ decorative imagery, frameworks, tracking, and remote font dependencies.
 
 - White background `#ffffff`, dark text `#1f2328`, secondary text `#59636e`.
 - Blue links `#0969da`, hover `#0550ae`, subdued separators `#d1d9e0b3`.
-- Tahoma with Arial and sans-serif fallbacks; base text 1rem with 1.4 line height.
+- Open Sans body text with Arial and sans-serif fallbacks; base text 1rem with
+  1.4 line height. Merriweather headings at weight 700, with Georgia and serif
+  fallbacks. Sizes and spacing otherwise retain the existing design.
 - Content width 48rem; page gutters 1rem. The homepage pairs a 12rem grayscale
   portrait with the introduction. At 40rem and below it becomes a single column
   and the portrait is 9rem wide.
-- `#` and `##` heading markers, underlined links, small inline SVG icons.
+- Plain headings, underlined links, and small inline SVG icons.
 - Contact, profiles, projects, and slides form a simple vertical sequence.
 - Project pages add a compact metadata line and a milestone list. Status markers
   are accompanied by words, so color is not the only indication of state.
@@ -51,7 +53,29 @@ language.
 
 ## Boundaries
 
-`main.css` owns the site layout; `languages.css` is shared with the independent
-slide viewer. No runtime JavaScript is needed. Use Hugo templates and data for
+`fonts.css` declares local font faces and family variables. `main.css` owns the
+site layout; `languages.css` and `fonts.css` are shared with the independent slide
+viewer. No runtime JavaScript is needed. Use Hugo templates and data for
 repeated structure, Markdown for prose, and language dictionaries for shared
 labels. Add a custom layout only when the content needs one.
+
+## Bundled fonts
+
+The font trial uses self-hosted WOFF2 files in `static/fonts/`: Open Sans normal
+and italic, with variable weights 400–700, and Merriweather normal at weight 700.
+Latin and Latin Extended subsets cover the four site languages. `font-display:
+swap` keeps text visible while the fonts load; browsers fetch subsets as needed.
+Mathematical project symbols keep their existing dedicated font stacks.
+
+Files were downloaded from the [Google Fonts CSS API](https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400..700;1,400..700&family=Merriweather:wght@700&display=swap)
+on 2026-10-05 using a current Chrome user agent (Open Sans service version v44,
+Merriweather v33). The downloaded font files are unchanged. There are no Google
+Fonts requests at runtime. The original SIL Open Font License texts are bundled
+at `static/fonts/open-sans/OFL.txt` and `static/fonts/merriweather/OFL.txt`, from
+[Open Sans](https://github.com/google/fonts/tree/main/ofl/opensans) and
+[Merriweather](https://github.com/google/fonts/tree/main/ofl/merriweather).
+
+To change the pairing, edit the families in `assets/css/fonts.css` and replace
+font files and license notices as necessary. The font CSS is concatenated into
+both the main stylesheet and the slide control stylesheet; relative font URLs
+resolve from `/css/` to `/fonts/`.
