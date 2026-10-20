@@ -25,9 +25,10 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: 1.1875rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
 }
 
 img {
@@ -60,6 +61,7 @@ a:focus-visible {
   padding: 0.4rem 0.65rem;
   color: #ffffff;
   background: var(--foreground);
+  font: 0.875rem/1.4 var(--ui-font);
   transform: translateY(-250%);
 }
 
@@ -86,7 +88,7 @@ a:focus-visible {
 .hero-main {
   display: grid;
   grid-template-columns: 12rem minmax(0, 1fr);
-  gap: 2.25rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -97,26 +99,27 @@ h4,
 h5,
 h6 {
   font-family: var(--heading-font);
-  font-weight: 700;
-  line-height: 1.25;
+  font-weight: 400;
+  line-height: 1.15;
+  text-wrap: balance;
 }
 
 h1 {
   margin: 0 0 1rem;
-  font-size: 2rem;
+  font-size: clamp(2.125rem, 1.5rem + 2.5vw, 3rem);
 }
 
 h2 {
   margin: 0 0 1rem;
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
 }
 
 .home h1 {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
 }
 
 .home h2 {
@@ -128,8 +131,22 @@ h3 {
   max-width: 34rem;
 }
 
+.intro,
+.project-description,
+.project-summary,
+.project-content,
+.prose,
+.lede,
+.page-list span {
+  line-height: 1.45;
+}
+
 .intro p {
-  margin: 0 0 0.85rem;
+  margin: 0 0 0.625rem;
+}
+
+.intro > :last-child {
+  margin-bottom: 0;
 }
 
 .portrait {
@@ -145,9 +162,9 @@ h3 {
 .lower-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.25rem;
+  gap: 2.5rem;
   align-items: start;
-  margin-top: 2.25rem;
+  margin-top: 2.75rem;
 }
 
 .lower-grid .links-section,
@@ -179,7 +196,6 @@ h3 {
 .project-description {
   max-width: 40rem;
   margin: 0.2rem 0 0;
-  font-style: italic;
 }
 
 .project-symbol {
@@ -283,8 +299,10 @@ h3 {
   margin-top: auto;
   padding-block: 1rem 2rem;
   color: var(--muted);
+  font-family: var(--ui-font);
   font-size: 0.8rem;
   font-weight: 400;
+  line-height: 1.5;
 }
 
 .site-footer p {
@@ -307,18 +325,19 @@ h3 {
 .page-header .eyebrow {
   margin: 0 0 0.5rem;
   color: var(--muted);
+  font-family: var(--ui-font);
   font-size: 0.8rem;
 }
 
 .page h1 {
-  font-size: 2rem;
+  font-size: clamp(2.125rem, 1.5rem + 2vw, 2.75rem);
 }
 
 .lede {
   max-width: 42rem;
   margin: 1rem 0 0;
   color: var(--muted);
-  font-size: 1.05rem;
+  font-size: 1.25rem;
 }
 
 .prose {
@@ -336,7 +355,7 @@ h3 {
 .prose p,
 .prose ul,
 .prose ol {
-  margin-block: 1rem;
+  margin-block: 0.625rem;
 }
 
 .page-list {
@@ -404,13 +423,13 @@ h3 {
 
 .project-header h1 {
   margin-bottom: 0.75rem;
-  font-size: 2rem;
+  font-size: clamp(2.125rem, 1.5rem + 2vw, 2.75rem);
 }
 
 .project-summary {
   max-width: 44rem;
   margin: 0;
-  font-size: 1.05rem;
+  font-size: 1.25rem;
 }
 
 .project-summary p {
@@ -420,7 +439,9 @@ h3 {
 .project-meta {
   margin: 0.75rem 0 0;
   color: var(--muted);
-  font-size: 0.85rem;
+  font-family: var(--ui-font);
+  font-size: 0.8125rem;
+  line-height: 1.6;
 }
 
 .project-content {
@@ -428,7 +449,7 @@ h3 {
 }
 
 .project-content > p {
-  margin-block: 1rem;
+  margin-block: 0.625rem;
 }
 
 .project-content section {
@@ -481,6 +502,7 @@ h3 {
   border-radius: 50%;
   color: #ffffff;
   background: var(--background);
+  font-family: var(--ui-font);
   font-size: 0.72rem;
   font-weight: 700;
   line-height: 1;
@@ -498,7 +520,9 @@ h3 {
 
 .milestone-body h3 {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.1875rem;
+  font-weight: 700;
+  line-height: 1.4;
 }
 
 .milestone-body p {
@@ -521,6 +545,7 @@ h3 {
 
 .milestone-status {
   color: var(--muted);
+  font-family: var(--ui-font);
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -531,6 +556,10 @@ h3 {
 }
 
 @media (max-width: 40rem) {
+  body {
+    font-size: 1.125rem;
+  }
+
   .home,
   .page,
   .site-footer {

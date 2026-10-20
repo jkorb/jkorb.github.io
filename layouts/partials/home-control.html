@@ -2,5 +2,5 @@
   {{ with resources.Get "icons/house.svg" }}
     <span class="home-icon" aria-hidden="true">{{ .Content | safeHTML }}</span>
   {{ end }}
-  <img src="{{ "favicon.ico" | relURL }}" alt="">
+  <img src="{{ "favicon.svg" | relURL }}" width="64" height="64" alt="">
 </a>

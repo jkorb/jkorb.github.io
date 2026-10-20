@@ -13,8 +13,8 @@ material; do not copy it into the site.
 - Translate prose, metadata, image descriptions, and accessibility labels. Keep
   publication/project titles, official names, people, URLs, and identifiers intact.
   Update all translations when changing a factual claim or publication setting.
-- Preserve the minimalist README-like appearance: Open Sans body text, Merriweather headings,
-  white background,
+- Preserve the minimalist README-like appearance: Computer Modern (CMU Serif)
+  prose and headings, Open Sans interface text, white background,
   dark text, blue links, grayscale portrait, and plain headings. Keep the
   compact language links usable by keyboard and without JavaScript.
 - `data/cv.json` is the single source for public CV paths and Dropbox URLs. The

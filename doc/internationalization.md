@@ -43,6 +43,12 @@ names and URLs stay in the shared record. Contact and profile data are shared.
 Page metadata lives in front matter; language-specific defaults live in
 `hugo.toml`.
 
+Social-sharing cards also have English, German, Dutch, and Italian versions.
+Keep `assets/social/og*.svg` and the exported `static/og*.png` files in sync
+with the homepage name and description. The shared social metadata partial
+selects the page language's image and derives its accessible description from
+that language's homepage. See [Design](design.md#social-sharing-images).
+
 Preserve official institution, journal, project, software, and personal names.
 Translate surrounding prose and generic disciplines. Preserve research claims,
 dates, quantities, and all link destinations. Do not translate paper or talk
