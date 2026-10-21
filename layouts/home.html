@@ -24,7 +24,7 @@
         {{ with hugo.Data.contact }}
           <address>
             <span>{{ .department }}, {{ .institution }}</span>
-            <span>{{ .building }}, {{ i18n "floor" }}, {{ .street }}</span>
+            <span>{{ .building }}, {{ .office }}, {{ i18n "floor" }}, {{ .street }}</span>
             <span>{{ .postal_code }} {{ .city }}, {{ i18n "country" }}</span>
           </address>
           <p class="contact-email">
